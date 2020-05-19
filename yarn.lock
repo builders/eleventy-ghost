@@ -1611,6 +1611,13 @@ dotenv@^8.2.0:
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
   integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
 
+downsize@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/downsize/-/downsize-0.0.8.tgz#21435a610c8c68220f5cc31474979b4d025f038e"
+  integrity sha1-IUNaYQyMaCIPXMMUdJebTQJfA44=
+  dependencies:
+    xregexp "2.0.0"
+
 easy-extender@^2.3.4:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/easy-extender/-/easy-extender-2.3.4.tgz#298789b64f9aaba62169c77a2b3b64b4c9589b8f"
@@ -5426,6 +5433,11 @@ xmlhttprequest-ssl@~1.5.4:
   version "1.5.5"
   resolved "https://registry.yarnpkg.com/xmlhttprequest-ssl/-/xmlhttprequest-ssl-1.5.5.tgz#c2876b06168aadc40e57d97e81191ac8f4398b3e"
   integrity sha1-wodrBhaKrcQOV9l+gRkayPQ5iz4=
+
+xregexp@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/xregexp/-/xregexp-2.0.0.tgz#52a63e56ca0b84a7f3a5f3d61872f126ad7a5943"
+  integrity sha1-UqY+VsoLhKfzpfPWGHLxJq16WUM=
 
 xtend@^4.0.0:
   version "4.0.2"

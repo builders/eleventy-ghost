@@ -37,6 +37,7 @@
     "clean-css": "^4.2.3",
     "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
+    "downsize": "^0.0.8",
     "eleventy-plugin-lazyimages": "^1.1.1",
     "eleventy-plugin-local-images": "^0.3.0",
     "eslint-utils": "2.0.0",
