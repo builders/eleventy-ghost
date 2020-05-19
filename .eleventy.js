@@ -36,6 +36,7 @@ module.exports = function(config) {
     // Apply performance attributes to images
     if (lazyImagesOn) {
         config.addPlugin(lazyImages, {
+            imgSelector: 'main img', // custom image selector
             cacheFile: ""
         });
     }
