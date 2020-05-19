@@ -11,6 +11,7 @@ const htmlMinTransform = require("./src/transforms/html-min-transform.js");
 const moment = require("moment");
 
 // Retrieve images. Set to false for faster build times.
+let lazyImagesOn = true;
 let getImages = true;
 
 // Init Ghost API
@@ -33,7 +34,7 @@ module.exports = function(config) {
     config.addPlugin(pluginRSS);
 
     // Apply performance attributes to images
-    if (getImages) {
+    if (lazyImagesOn) {
         config.addPlugin(lazyImages, {
             cacheFile: ""
         });
