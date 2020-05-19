@@ -3,7 +3,7 @@ require("dotenv").config();
 const cleanCSS = require("clean-css");
 const fs = require("fs");
 const pluginRSS = require("@11ty/eleventy-plugin-rss");
-const localImages = require("eleventy-plugin-local-images");
+const localImages = require("./src/_includes/js/eleventy-plugin-local-images.js");
 const lazyImages = require("eleventy-plugin-lazyimages");
 const ghostContentAPI = require("@tryghost/content-api");
 
