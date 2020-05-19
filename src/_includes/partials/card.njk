@@ -19,7 +19,7 @@
 
                 <section class="post-card-excerpt">
                     {% if post.feature_image %}
-                        <p>{{ post.excerpt }}</p>
+                        <p>{% excerpt post.excerpt %}</p>
                     {% endif %}
                 </section>
 
