@@ -9,6 +9,7 @@ const ghostContentAPI = require("@tryghost/content-api");
 
 const htmlMinTransform = require("./src/transforms/html-min-transform.js");
 const moment = require("moment");
+const downsize = require("downsize");
 
 // Retrieve images. Set to false for faster build times.
 let lazyImagesOn = true;
@@ -199,6 +200,31 @@ module.exports = function(config) {
             var format_date = moment(date).format(format);
         }
         return format_date;
+    });
+
+    // Add shortcode for excerpt truncation
+    config.addShortcode("excerpt", function(str) {
+        let excerpt = str;
+        let characters = 300;
+
+        if (str.length > characters) {
+            excerpt = excerpt.split(".");
+            one_sentence = excerpt[0] + ".";
+            two_sentences = excerpt[0] + "." + excerpt[1] + ".";
+            if (two_sentences.length <= characters) {
+                return two_sentences;
+            }
+            else if (one_sentence.length <= characters) {
+                return one_sentence;
+            } else {
+                excerpt = excerpt[0];
+                let truncateOptions = {};
+                truncateOptions.words = 40;
+                return downsize(excerpt, truncateOptions) + "...";
+            }
+        } else {
+            return excerpt;
+        }
     });
 
     // Display 404 page in BrowserSnyc
