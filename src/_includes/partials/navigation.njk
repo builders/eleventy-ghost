@@ -3,9 +3,9 @@
         <div class="site-nav-left-wrapper">
             <div class="site-nav-left">
                 {% if site.logo %}
-                    <a class="site-nav-logo" href="{{ site.url }}"><img src="{{ site.logo }}" alt="{{ site.title }}"></a>
+                    <a class="site-nav-logo" href="/"><img src="{{ site.logo }}" alt="{{ site.title }}"></a>
                 {% else %}
-                    <a class="site-nav-logo" href="{{ site.url }}">{{ site.title }}</a>
+                    <a class="site-nav-logo" href="/">{{ site.title }}</a>
                 {% endif %}
                 <div class="site-nav-content">
                     <ul class="nav" role="menu">
@@ -41,6 +41,9 @@
                     <a class="social-link social-link-tw" href="https://twitter.com/{{ site.twitter }}" title="Twitter" target="_blank" rel="noopener">{% include "partials/icons/twitter.njk" %}</a>
                 {% endif %}
             </div>
+            {% if not labs.members %}
+                <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{ site.url }}/rss/" title="RSS" target="_blank" rel="noopener">{% include "partials/icons/rss.njk" %}</a>
+            {% endif %}
         {% endif %}
         {% if labs.members %}
             <a class="subscribe-button" href="#subscribe">Subscribe</a>
