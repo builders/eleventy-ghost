@@ -115,7 +115,7 @@ module.exports = function(config) {
         });
 
         // Bring featured post to the top of the list
-        collection.sort((post, nextPost) => nextPost.featured - post.featured);
+        // collection.sort((post, nextPost) => nextPost.featured - post.featured);
 
         return collection;
     });
